@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+
+h1{
+    color: #FF0000;
+    font-family: 'Darumadrop One', cursive;
+    text-align: center;
+}
+
+.tela-do-jogo{
+    width: 100%;
+    height: 500px;
+    border-bottom: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-image: url('https://samwebsterualed2019.files.wordpress.com/2019/12/sequoiaforest2-1.png');
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+}
+
+
+
+.zombie{
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    animation: zombie-corre 1.25s infinite linear;
+}
+
+.belmont{
+    width: 300px;
+    position: absolute;
+    bottom: -20px;
+}
+
+.pulo{
+    animation: pulo 500ms ease-out;
+}
+
+/* Define um estilo básico para a tela do jogo */
+.tela {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #DCDCDC;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+  
+/* Define um estilo para o botão de fuga */
+button {
+    background-color: #e74c3c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+  
+/* Define um estilo para o link do botão de fuga */
+button a {
+    color: #fff;
+    text-decoration: none;
+}
+  
+/* Define um estilo para o link do botão de fuga quando o mouse passa por cima */
+button:hover a {
+    text-decoration: underline;
+} 
+
+@keyframes zombie-corre{
+    from{
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes pulo{
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 160px;
+    }
+
+    50%{
+        bottom: 160px;
+    }
+
+    60%{
+        bottom: 160px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
